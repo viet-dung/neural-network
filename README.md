@@ -1,2 +1,2 @@
-# Neural Network
-Neural Network from Stratch 
+# Neural Network from Stratch 
+We exclusively employ NumPy to implement neural networks.
