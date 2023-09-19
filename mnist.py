@@ -14,7 +14,7 @@ net.add(FCLayer(28**2,100))
 net.add(ActivationLayer(ReLU,ReLU_deriv))
 net.add(FCLayer(100,10))
 net.add(ActivationLayer(tanh,tanh_prime))
-net.fit(train[:1],train_label[:1],10,0.1)
+net.fit(train[:],train_label[:],10,0.1)
 
 test_label = one_hot_coding(test_label)
 net.predict(test,test_label)
