@@ -1,3 +1,4 @@
+import numpy as np
 def one_hot_coding(data):
     out = np.zeros((data.shape[0],data.max()+1,1))
     out[np.arange(data.shape[0]),data] = 1

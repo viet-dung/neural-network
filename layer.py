@@ -1,3 +1,5 @@
+import numpy as np
+
 class Layer:
     def __init__(self, input, output):
         self.input = input
@@ -21,8 +23,8 @@ class FCLayer(Layer):
         return self.output
     
     def backward(self,output_error,learning_rate):
-        input_error = np.dot(self.weight.T,output_error)
-        weight_error = np.dot(output_error,self.input.T)
+        input_error = self.weight.T.dot(output_error)
+        weight_error = output_error.dot(self.input.T)
 
         self.weight -= learning_rate*weight_error
         self.bias -= learning_rate*output_error
